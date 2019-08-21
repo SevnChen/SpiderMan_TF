@@ -1,12 +1,6 @@
-from __future__ import division
-from __future__ import print_function
-
+import tensorflow as tf
 from utils.inits import zeros
 from models.layers.layers import Layer
-import tensorflow as tf
-
-flags = tf.app.flags
-FLAGS = flags.FLAGS
 
 
 class BipartiteEdgePredLayer(Layer):
