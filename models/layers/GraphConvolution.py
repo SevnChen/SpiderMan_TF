@@ -3,7 +3,9 @@ from models.layers import Layer
 
 
 class GraphConvolution(Layer):
-    """Graph convolution layer."""
+    """
+        Graph convolution layer.
+    """
 
     def __init__(self, input_dim, output_dim, placeholders, dropout=0.,
                  sparse_inputs=False, act=tf.nn.relu, bias=False,

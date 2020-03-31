@@ -6,11 +6,17 @@ from utils import metrics
 
 class GCN(Model):
     def __init__(self, placeholders, input_dim, **kwargs):
+        '''
+            features: node的特征
+            input_dim: 输入维度数
+            output_dim： 输出维度数
+            support: 临界矩阵
+        '''
         super(GCN, self).__init__(**kwargs)
 
         self.inputs = placeholders['features']
         self.input_dim = input_dim
-        # self.input_dim = self.inputs.get_shape().as_list()[1]  # To be supported in future Tensorflow versions
+        # self.input_dim = self.inputs.get_shape().as_list()[1]
         self.output_dim = placeholders['labels'].get_shape().as_list()[1]
         self.placeholders = placeholders
 
